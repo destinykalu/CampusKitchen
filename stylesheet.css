@@ -1,0 +1,104 @@
+/* 
+   COLOR PALETTE : i want natural tones and earth colors for this website to represent cleaning eating
+   - Brown:     rgb(107, 76, 36)
+   - Cream:     rgb(252, 249, 242)
+   - Green:     rgb(128, 173, 123)
+   - Black/Grey:rgba(52, 45, 45)
+   */
+
+/* Page body with your cream background color */
+body {
+    background-color: rgb(252, 249, 242);
+    margin: 0;
+    padding: 0 0 40px 0; /* Clears default margins; pads bottom */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Header layout using Flexbox and Relative positioning */
+.header {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgb(107, 76, 36); 
+    height: 200px; 
+    width: 100%; 
+    position: relative; /* Allows the logo to position itself absolutely on the left */
+}
+
+/*  far left of the brown header div */
+#logo {
+    position: absolute;
+    left: 20px; /* Gives some spacing from the left edge */
+    width: 200px; 
+}
+
+/* Centered header text */
+.header-text {
+    color: rgb(252, 249, 242); 
+    font-size: 100px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    margin: 0;
+}
+
+/* About header */
+#about {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: rgb(107, 76, 36); 
+    font-size: 60px; 
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Horizontal rule color adjustment to fit theme */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(52, 45, 45, 0.3);
+    width: 90%;
+}
+
+/* Creator section container */
+#about-destiny {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* Floats the creator picture and indents the text around it */
+#destiny {
+    float: left;
+    margin-right: 30px; /* Creates the text indentation spacing */
+    margin-bottom: 15px;
+    height: 400px; 
+    width: 300px; 
+    object-fit: cover; /* Keeps the picture from looking stretched */
+}
+
+/* Subheading inside the creator section */
+#about-destiny h2.header-text {
+    color: rgb(107, 76, 36); /* Changes this specific text to brown so it stands out on the cream background */
+    font-size: 35px;
+    margin-top: 0;
+    text-align: left; /* Aligns with the floated text */
+}
+
+p {
+    color: rgb(107, 76, 36); 
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Website section container */
+#about-website {
+    width: 90%;
+    margin: 0 auto;
+    clear: both; /* Prevents the website text from wrapping into the floated photo */
+    padding-top: 20px;
+}
+.meet-creator {
+    font-size: 80px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(128, 173, 123);
+}
