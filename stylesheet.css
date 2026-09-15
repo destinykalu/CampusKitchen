@@ -6,7 +6,7 @@
    - Black/Grey:rgba(52, 45, 45)
    */
 
-/* Page body with your cream background color */
+/* color palette */
 :root{
     --cream: rgb(252, 249, 242);
     --brown:  rgb(107, 76, 36);
@@ -15,37 +15,118 @@
 
 }
 
+.bg-brown-dark{
+    background: var(--brown);
+    color: var(--cream);
+}
+.bg-brown-light{
+    background: var(--cream);
+    color: var(--brown);
+}
+.bg-green-light{
+    background: var(--cream);
+    color: var(--green);
+}
+.bg-green-dark{
+    background: var(--green);
+    color: var(--cream);
+}
 
+
+
+
+html{
+    box-sizing: border-box;
+
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+html, body{
+    height: 100%;
+}
 body {
     background-color: var(--cream);
     margin: 0;
     padding: 0 0 40px 0; /* Clears default margins; pads bottom */
     font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.4;
+}
+hgroup{
+    background-image: linear-gradient( rgb(107 76 36 / .5), rgb(107 76 36 / .5)),
+    url(images/What\'sForDinner.jpeg);
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--cream);
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+hgroup p{
+    letter-spacing: 1px;
+    font-size: 35px;
+    font-family: "DM Mono", monospace;;
+}
+/* Horizontal rule color adjustment to fit theme */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(52, 45, 45, 0.3);
+    width: 100%;
 }
 
 /* Header layout using Flexbox and Relative positioning */
+
 .header {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    background-color: var(--brown); 
-    height: 200px; 
-    width: 100%; 
-    position: relative; /* Allows the logo to position itself absolutely on the left */
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0 20px;
+    height: 80px;
+    width: 100%;
 }
 
-/*  far left of the brown header div */
-#logo {
-    position: absolute;
-    left: 20px; /* Gives some spacing from the left edge */
-    width: 200px; 
+
+.logo {
+    display: flex;
+    align-items: center;
+  
+  
 }
 
-/* Centered header text */
-.header-text {
-    color:var(--cream); 
-    font-size: 100px; 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+.header img {
+    height: 50px;
+    margin: 20px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-list a {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: "DM Mono", monospace;
+}
+.nav-list a:hover{
+    text-decoration: underline;
+}
+.tagline{
     margin: 0;
 }
 
@@ -61,13 +142,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Horizontal rule color adjustment to fit theme */
-hr {
-    border: 0;
-    height: 1px;
-    background-color: rgba(52, 45, 45, 0.3);
-    width: 90%;
-}
+
 
 /* Creator section container */
 #about-destiny {
@@ -93,7 +168,7 @@ hr {
     text-align: left; /* Aligns with the floated text */
 }
 
-p {
+#about-destiny {
     color: var(--brown); 
     font-size: 18px;
     line-height: 1.6;
@@ -105,9 +180,41 @@ p {
     margin: 0 auto;
     clear: both; /* Prevents the website text from wrapping into the floated photo */
     padding-top: 20px;
+    color: var(--brown); 
+    font-size: 18px;
+    line-height: 1.6;
 }
 .meet-creator {
     font-size: 80px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--green);
+}
+/*Footer
+--------------------------------------*/
+footer{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+footer a{
+    
+    color: inherit;
+
+}
+footer p{
+    letter-spacing: 1px;
+    font-family: "DM Mono", monospace;
+}
+.list-reset{
+   display: flex;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   gap: 40px;
+}
+.icons{
+    height: 40px;
 }
