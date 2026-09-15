@@ -7,8 +7,17 @@
    */
 
 /* Page body with your cream background color */
+:root{
+    --cream: rgb(252, 249, 242);
+    --brown:  rgb(107, 76, 36);
+    --green:  rgb(128, 173, 123);
+    --grey: rgba(52, 45, 45);
+
+}
+
+
 body {
-    background-color: rgb(252, 249, 242);
+    background-color: var(--cream);
     margin: 0;
     padding: 0 0 40px 0; /* Clears default margins; pads bottom */
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -19,7 +28,7 @@ body {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    background-color: rgb(107, 76, 36); 
+    background-color: var(--brown); 
     height: 200px; 
     width: 100%; 
     position: relative; /* Allows the logo to position itself absolutely on the left */
@@ -34,7 +43,7 @@ body {
 
 /* Centered header text */
 .header-text {
-    color: rgb(252, 249, 242); 
+    color:var(--cream); 
     font-size: 100px; 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     margin: 0;
@@ -45,7 +54,7 @@ body {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    color: rgb(107, 76, 36); 
+    color: var(--brown); 
     font-size: 60px; 
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     margin-top: 30px;
@@ -78,14 +87,14 @@ hr {
 
 /* Subheading inside the creator section */
 #about-destiny h2.header-text {
-    color: rgb(107, 76, 36); /* Changes this specific text to brown so it stands out on the cream background */
+    color: var(--brown); /* Changes this specific text to brown so it stands out on the cream background */
     font-size: 35px;
     margin-top: 0;
     text-align: left; /* Aligns with the floated text */
 }
 
 p {
-    color: rgb(107, 76, 36); 
+    color: var(--brown); 
     font-size: 18px;
     line-height: 1.6;
 }
@@ -100,5 +109,5 @@ p {
 .meet-creator {
     font-size: 80px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(128, 173, 123);
+    color: var(--green);
 }
