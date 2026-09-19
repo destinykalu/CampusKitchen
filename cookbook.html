@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta  charset="UTF-8" >
+        <meta name="viewport" content="width= device-width , initial-scale= 1.0">
+        <title>CampusKitchen</title>
+        <link rel="icon" type="image/png" href="images/campus_kitchen.png">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+
+    <body>
+        <div class = "container">
+            <div class = "bg-brown-dark header">
+        
+                <div class="logo">
+                        <img src="images/campus_kitchen.png">
+                        <p >CampusKitchen | Menu</p>
+                    </div>
+                    
+                    <ul class="nav-list">
+                        <li ><a href=""">Get Started</a></li>
+                        <li ><a href="#contact">Contact</a></li>
+                        <li ><a href="#about-destiny">About</a></li>
+                    </ul>
+            </div class= "cookbook-page">
+
+            <div class="page-headers">
+                <h1>CampusCookbook</h1>
+            </div>
+            <div class="page-text">
+           
+            <p class="cookbook-page-instructions"> Save, create, and keep all your favorites in one delicious place. </p>
+            <div class="search-recipes bg-brown-light">
+
+                    <input type="text" placeholder="Search your recipes..." id="searchInput" class="search-input">
+                    
+                <div class="recipe-filters">
+                    <select name="categories" id="filterSelect" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="dessert">Dessert</option>
+                        <option value="snacks">Snacks</option>
+
+                    </select>
+
+                </div>
+                <button type="button" id="addRecipebtn" class="addbtn " >
+                    <i class="fas fa-plus"></i> Add</button>
+            </div>
+            <div class="my-recipes">
+                <h3>My Recipes</h3>
+            </div>
+            <div id="recipeContainer" class="recipe-grid">
+                <!-- recipes will be added here-->
+            </div>
+
+            <div id="emptyState" class="empty-state">
+                <i class="fas fa-notes-medical"></i>
+                <h4>No Recipes</h4>
+                <p> Add your first recipe by clicking the "Add" button</button></p>
+            </div>
+
+            <div id="addRecipeModal" class="modal-overlay ">
+                <div class="modal bg-brown-light">
+                    <div class="modal-header">
+                        <h3 class="modal-title"> New Recipe: </h3>
+                        <input type="text" placeholder="Recipe Name..." id="recipeName class="recipe-name" required>
+                        <button id="closeModalBtn" class="modal-close" >
+                           x
+                        </button>
+                    </div>
+                      <div class="modal-form">
+                        <form action="/action_page.php">
+                            <div class="ingredients-form">
+                                <h3>Ingredients:</h3>
+                                <ul id="ingredientList" >
+                                    <li><input type="text" id="groceryItem" placeholder="Add item..."></li>
+                                </ul>
+                                <button type="button" id="addItemBtn" class="add-item">Add Item</button>
+                            </div>
+
+
+
+                            <div class="recipe-descriptors">
+                                <h3>Details:</h3>
+                                <div id="uploadImage" class="upload-image">
+                                    <i class="fas fa-notes-medical"></i>
+                                    <h4>Upload Image</h4>
+                                </div>
+
+                                <label for="cookTime">Cook Time:</label>
+                                <input type="text" id="cookTime" name="cookTime" placeholder="30 minutes">
+
+                                <label for="yeilds">Yeilds:</label>
+                                <input type="text" id="yeilds" name="yeilds" placeholder="1 serving">
+
+                                <label for="category">Category:</label>
+                                <div class="recipe-filters">
+                                    <select name="categories" id="filterSelect" class="filter-select">
+                                    <option value="all">All</option>
+                                    <option value="breakfast">Breakfast</option>
+                                    <option value="lunch">Lunch</option>
+                                    <option value="dinner">Dinner</option>
+                                    <option value="dessert">Dessert</option>
+                                    <option value="snacks">Snacks</option>
+
+                                </select>
+
+                            </div>
+
+                        
+
+              
+
+                            </div >
+
+                            <div class="recipe-instructions">
+                                <h3>Instructions:</h3>
+                                <textarea name="instructions" id="instructions" rows="28" cols="50" class="instructions-input" placeholder="To make this recipe, first you need to...">
+                                </textarea>
+                            </div>
+                            <button type="submit" class="submit-btn"> Save Recipe</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div id="confirmModal" class="modal-overlay">
+                <div class="modal confirmation-modal">
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete this recipe?</p>
+                        <div class="confirmation-buttons">
+                            <button id="cancelBtn" class="confirmation-btn cancel-btn">
+                                Cancel
+                            </button>
+                            <button id="DeleteBtn" class="confirmation-btn delete-btn">
+                                Delete
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+         <script src="script.js"></script>
+    </body>
+
+</html>
