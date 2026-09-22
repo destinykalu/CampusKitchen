@@ -581,4 +581,99 @@ select{
     color: var(--brown);
     
 }
+/* ==========================================================
+   PASTE THIS AT THE VERY BOTTOM OF stylesheet.css
+   New classes only; nothing existing is changed.
+   ========================================================== */
 
+/* Link import row in the New Recipe modal */
+.import-recipe{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0 15px;
+}
+.import-recipe input{
+    flex: 1;
+    border: none;
+    border-bottom: 2px solid var(--brown);
+    background: transparent;
+    color: var(--brown);
+    outline: none;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 2px;
+}
+.import-recipe .add-item{
+    padding: 5px 15px;
+}
+
+/* Recipe cards (built on your existing .recipe-card / .recipe-content) */
+.recipe-image{
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.recipe-title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--green);
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+}
+.recipe-meta{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--brown);
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.recipe-category{
+    border: .5px solid var(--brown);
+    border-radius: 10px;
+    padding: 0 12px;
+    font-size: 13px;
+}
+.recipe-actions{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.recipe-actions .add-item{
+    padding: 5px 20px;
+}
+
+
+#recipeContainer{
+    max-height: 700px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* Recipe grid: small boxes that wrap to fit the screen */
+.recipe-grid{
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 10px 5px 20px;
+}
+
+/* Each recipe in its own rounded box */
+.recipe-card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--brown);
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px var(--brown);
+    overflow: hidden;
+}
+.recipe-card .recipe-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.recipe-card .recipe-actions{
+    margin-top: auto;
+    padding-top: 15px;
+}

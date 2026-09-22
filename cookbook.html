@@ -72,6 +72,10 @@
                            x
                         </button>
                     </div>
+                    <div class="import-recipe">
+                        <input type="text" id="recipeUrl" placeholder="Paste a recipe link to import...">
+                        <button type="button" id="importBtn" class="add-item">Import</button>
+                    </div>
                       <div class="modal-form">
                         <form action="/action_page.php">
                             <div class="ingredients-form">
@@ -90,6 +94,7 @@
                                     <i class="fas fa-notes-medical"></i>
                                     <h4>Upload Image</h4>
                                 </div>
+                                <input type="file" id="imageInput" accept="image/*" hidden>
 
                                 <label for="cookTime">Cook Time:</label>
                                 <input type="text" id="cookTime" name="cookTime" placeholder="30 minutes">
